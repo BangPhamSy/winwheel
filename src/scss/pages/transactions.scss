@@ -1,0 +1,30 @@
+#my-transactions {
+	// h4, h5 {
+	//     font-weight: normal;
+	// }
+
+	// // hack table header font size. put here just so it only apllied locally in -
+	// // transaction component. move to 'table.scss' if it needed to be apllied globally
+	// .table > .table-row.table-header > .table-col {
+	//     font-weight: 700;
+	//     text-overflow: clip;
+	//     /* overflow-wrap: break-word; */
+	//     overflow: hidden;
+	// }
+	.voided {
+		color: red;
+	}
+	@media (max-width: map-get($grid-breakpoints, "sm")) {
+		.table > .table-row.table-header > .table-col {
+			font-weight: 700;
+			font-size: 10px;
+			// text-overflow: clip;
+			/* overflow-wrap: break-word; */
+			// overflow: hidden;
+		}
+
+		.table > .table-row > .table-col {
+			font-size: 10px;
+		}
+	}
+}

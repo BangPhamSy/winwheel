@@ -1,0 +1,148 @@
+.Select {
+  border-radius: $gap/4;
+
+  &-control {
+    height: auto;
+    border: none;
+    transition: all 300ms ease;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 6px 0px rgba(150, 150, 150, 0.7);
+    &:hover {
+      box-shadow: 3px 3px 6px 0px rgba(150, 150, 150, 0.7);
+    }
+  }
+
+  &-secondary {
+    .Select-control {
+      background-color: $color-bg;
+    }
+  }
+
+  &-inverted {
+    .Select-control {
+      background: $color-control-inverted;
+    }
+  }
+
+  &-input {
+    padding: $gap/2 $gap;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    & > input {
+      line-height: normal;
+      padding: 0;
+    }
+
+    &::before {
+      content: " ";
+      display: inline-block;
+    }
+  }
+
+  &-clear-zone {
+    color: $color-text-4;
+  }
+
+  &-placeholder,
+  &--single > &-control &-value {
+    padding-left: $gap;
+    // color: $color-text-4;
+    font-weight: 400;
+    background-color: white;
+  }
+
+  &-placeholder,
+  &-value {
+    padding: $gap/2 $gap * 1.5 $gap/2 $gap !important;
+    line-height: normal !important;
+  }
+
+  &-value-label {
+    // font-weight: $fw-bold;
+  }
+
+  &-multi-value-wrapper {
+    display: block;
+
+    .Select-value > .Select-value-label {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      padding: $gap/2 0;
+      line-height: normal;
+    }
+  }
+
+  &-menu-outer {
+    z-index: 1000;
+    border: 0;
+    border-radius: 0 0 $gap/4 $gap/4;
+    overflow: hidden;
+    -webkit-overscroll-behavior-y: content;
+    overscroll-behavior-y: content;
+    transition: all 300ms ease;
+
+    @include button-shadow();
+
+    .Select-menu {
+      .Select-option {
+        padding: $gap/2 $gap;
+        transition: all 200ms ease;
+
+        &.is-selected {
+          background-color: rgba($color-black, 0.07);
+        }
+
+        &.is-focused {
+          background-color: rgba($color-black, 0.04);
+        }
+      }
+    }
+  }
+
+  &-arrow-zone {
+    vertical-align: baseline;
+    width: $gap * 2;
+
+    .Select-arrow {
+      width: $gap/2;
+      height: $gap/2;
+      border: 0;
+      border-bottom: 0.1rem solid;
+      border-right: 0.1rem solid;
+      transform: rotate(45deg);
+      transition: all 200ms ease;
+    }
+  }
+  &.is-open > .Select-control {
+    .Select-arrow {
+      top: 2px;
+      width: $gap/2;
+      height: $gap/2;
+      border: 0;
+      border-bottom: 0.1rem solid;
+      border-right: 0.1rem solid;
+      transform: rotate(-135deg);
+    }
+  }
+
+  &.is-focused:not(.is-open) > .Select-control {
+    @include button-shadow();
+  }
+
+  &-error:not(.is-open) {
+    .Select-control {
+      box-shadow: $field-error;
+    }
+  }
+  &.is-disabled > .Select-control {
+    background: $color-control-inactive;
+
+    &:hover {
+      cursor: not-allowed;
+      box-shadow: 3px 3px 6px 0px rgba(150, 150, 150, 0.7);
+    }
+  }
+}

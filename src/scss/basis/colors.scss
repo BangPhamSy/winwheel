@@ -1,0 +1,77 @@
+/***************************
+* BACKGROUND COLORS
+***************************/
+.bg-primary {
+	background-color: $color-primary !important;
+}
+.bg-secondary {
+	background-color: $color-secondary !important;
+}
+.bg-tertiary {
+	background-color: $color-tertiary !important;
+}
+/* Don't use this color bg-black
+   Use $color-tertiary instead
+*/
+// .bg-black {
+// 	background-color: $color-black !important;
+// }
+.bg-white {
+	background-color: $color-white !important;
+}
+.bg-grey {
+	background-color: $color-grey !important;
+}
+
+// Status background colors
+.bg-info {
+	background-color: $color-bg-info !important;
+}
+.bg-success {
+	background-color: $color-bg-success !important;
+}
+.bg-warning {
+	background-color: $color-bg-warning !important;
+}
+.bg-error {
+	background-color: $color-bg-error !important;
+}
+
+/***************************
+* TEXT COLORS
+****************************/
+.color-text-1 {
+	color: $color-text-1 !important;
+}
+.color-text-2 {
+	color: $color-text-2 !important;
+}
+.color-text-3 {
+	color: $color-text-3 !important;
+}
+.color-white {
+	color: $color-white !important;
+}
+
+// Status text colors
+.color-info {
+	color: $color-info !important;
+}
+.color-success {
+	color: $color-success !important;
+}
+.color-warning {
+	color: $color-warning !important;
+}
+.color-error {
+	color: $color-error !important;
+}
+.color-primary {
+	color: $color-primary !important;
+}
+.color-secondary {
+	color: $color-secondary !important;
+}
+.color-tertiary {
+	color: $color-tertiary !important;
+}

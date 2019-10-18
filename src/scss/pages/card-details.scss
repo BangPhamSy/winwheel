@@ -1,0 +1,21 @@
+#my-card-details {
+	.card-item-details {
+		& > .col-img {
+			max-width: $gap * 15; //300px
+		}
+
+		@media (max-width: map-get($grid-breakpoints, 'md')) {
+			& > .col-img {
+				max-width: unset;
+			}
+			.card-img {
+				img {
+					display: none;
+				}
+				.qr-container {
+					display: block;
+				}
+			}
+		}
+	}
+}

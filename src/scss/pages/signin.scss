@@ -1,0 +1,150 @@
+/*----------------------------------------------------
+------------------- SIGN IN PAGE ---------------------
+-----------------------------------------------------*/
+
+.signin-page {
+  .section-banner {
+    text-align: center;
+    box-shadow: 0px $gap * 0.666 $gap/2 (-$gap) * 0.666 rgba($color-black, 0.1);
+    img {
+      width: 100%;
+      max-height: 100%;
+    }
+  }
+  .title {
+    font-weight: inherit;
+  }
+  .section-form {
+    .link-no-style u {
+      color: $color-primary;
+    }
+    .form-container-box {
+      height: 90%;
+      // width: 90%;
+      // border: 1px solid #7f8c8d;
+      border-radius: 10px;
+      display: inherit;
+      margin: 2.5rem 1rem 2.5rem;
+      padding: 2.5rem 1rem 2.5rem;
+    }
+    .form-container {
+      display: contents;
+      .text-right {
+        float: right;
+      }
+    }
+    .form-divider {
+      // box-shadow: 0.625rem 0 0.4rem -0.625rem rgba(0, 0, 0, 0.2),
+      //   inset -0.125rem 0px 0 -0.1rem $color-tertiary;
+      height: 90%;
+    }
+    .form-divider-right {
+      display: block;
+    }
+    .login-bottom {
+      display: table;
+      width: 100%;
+      div {
+        vertical-align: middle;
+      }
+    }
+    .forgot-section {
+      display: inline-block;
+    }
+    .icon {
+      height: $gapem * 4;
+      width: 100%;
+      padding: $gap/2;
+    }
+    .reg a.btn {
+      border-radius: 10px;
+      background-image: linear-gradient(
+        to right,
+        #ff8900 0%,
+        #ff7a13 51%,
+        #ff6232 100%
+      );
+      color: #fff;
+      background-color: transparent;
+      font-weight: normal;
+      font-size: inherit;
+    }
+    .sign-in {
+      border-radius: 10px;
+      background-image: linear-gradient(
+        to right,
+        #ff3700 0%,
+        #ff592c 51%,
+        #ff7f5c 100%
+      );
+      color: #fff;
+      background-color: transparent;
+      font-weight: normal;
+      font-size: inherit;
+    }
+    .text-mobile {
+      vertical-align: baseline;
+      display: none;
+    }
+  }
+
+  // mobile responsive
+  @media only screen and (max-device-width: 768px) {
+    .section-form {
+      .form-signin-right {
+        display: none;
+      }
+      .text-mobile {
+        display: block;
+        font-size: small;
+      }
+    }
+  }
+  @media only screen and (min-device-width: 768px) and (min-device-width: 769px) {
+    .section-form {
+      .form-signin-left {
+        padding-right: 0;
+      }
+      .form-signin-right {
+        padding-left: 0;
+      }
+    }
+  }
+  @media (max-width: map-get($grid-breakpoints, "sm")) {
+    .section-form {
+      .form-signin-right {
+        display: none;
+      }
+      .form-container-box {
+        border: none;
+        padding: 10px;
+      }
+      .form-container {
+        display: unset;
+        .form-divider .text-right {
+          float: none;
+          text-align: left !important;
+          margin-top: 1.875rem !important;
+        }
+      }
+      .login-bottom div {
+        display: block;
+        font-size: small;
+      }
+      .form-divider {
+        height: fit-content;
+        // box-shadow: none;
+      }
+      .form-group:not(:last-child) {
+        margin-bottom: 0.125rem;
+      }
+      .form-divider-right {
+        display: none;
+      }
+      .text-mobile {
+        display: block;
+        font-size: small;
+      }
+    }
+  }
+}

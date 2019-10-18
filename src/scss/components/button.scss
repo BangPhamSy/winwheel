@@ -1,0 +1,146 @@
+/*----------------------------------------------------
+---------------------- BUTTON ------------------------
+-----------------------------------------------------*/
+
+.btn {
+  border: none;
+  display: inline-block;
+  padding: $gap * 0.666 $gap * 1.75;
+  outline: none;
+  border-radius: 10rem;
+  background-color: $color-tertiary;
+  transition: 0.2s all;
+  text-align: center;
+
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: normal;
+  text-decoration: none;
+
+  &.btn-small {
+    padding: $gap/2 $gap;
+    font-size: $font-body;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: default;
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+    transform: translateY(-0.3rem);
+    @include button-shadow();
+  }
+
+  &:active,
+  &:visited {
+    background-color: $color-tertiary;
+    transform: translateY(0);
+  }
+
+  &.btn-primary {
+    background-color: $color-btn-primary;
+  }
+
+  &.btn-link {
+    background: transparent;
+    cursor: pointer;
+    color: $color-text-1;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0.2em 0 -0.1em;
+
+    &:hover,
+    &:focus {
+      cursor: default;
+      text-decoration: none;
+      outline: none;
+      transform: none;
+      box-shadow: none;
+      @include link-active;
+    }
+  }
+
+  &.btn-link {
+    background: transparent;
+    cursor: pointer;
+    color: $color-text-1;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0.2em 0 -0.1em;
+
+    &:hover,
+    &:focus {
+      cursor: default;
+      text-decoration: none;
+      outline: none;
+      transform: none;
+      box-shadow: none;
+      @include link-active;
+    }
+  }
+
+  &:disabled,
+  &[disabled] {
+    // background-color: darken($color-control-inactive, 20%);
+    cursor: not-allowed;
+    box-shadow: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+
+    &:hover,
+    &:focus {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    &:active,
+    &:visited {
+      background-color: darken($color-control-inactive, 20%);
+    }
+  }
+
+  .spinner {
+    &-container {
+      margin: 0 $gapem;
+      width: $gapem * 0.8;
+      height: $gapem * 0.8;
+    }
+    &::before {
+      border-right-color: white;
+      border-bottom-color: white;
+      border-top-color: white;
+      animation: spin-tail 2.3s infinite linear,
+        spin-tail-white-color 2.3s infinite linear;
+    }
+  }
+}
+
+@keyframes spin-tail-white-color {
+  0% {
+    border-right-color: white;
+    border-bottom-color: transparent;
+  }
+  25% {
+    border-right-color: white;
+    border-bottom-color: transparent;
+  }
+  25.1% {
+    border-right-color: white;
+    border-bottom-color: white;
+  }
+  74.9% {
+    border-right-color: white;
+    border-bottom-color: white;
+  }
+  75% {
+    border-right-color: white;
+    border-bottom-color: transparent;
+  }
+  100% {
+    border-right-color: white;
+    border-bottom-color: transparent;
+  }
+}

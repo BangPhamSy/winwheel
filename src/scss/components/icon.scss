@@ -1,0 +1,31 @@
+.icon {
+	display: inline-block;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	&-flag {
+		width: $gap;
+		height: $gap;
+		&-VN {
+			background-image: url(../images/flags/vn_flag.png);
+		}
+	}
+
+	&-edit {
+		width: $gap * 0.7;
+		height: $gap * 0.7;
+		background-image: url(../images/icons/edit.svg);
+	}
+
+	&-info {
+		line-height: $gap * 0.9;
+		background-color: $color-black;
+		color: $color-white;
+		border-radius: 50%;
+		width: $gap * 0.9;
+		height: $gap * 0.9;
+		font-size: $font-small;
+		text-align: center;
+		vertical-align: middle;
+		font-style: normal;
+	}
+}

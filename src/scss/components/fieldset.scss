@@ -1,0 +1,22 @@
+.fieldset {
+	position: relative;
+	border: 1px solid darken($color-grey, 10%);
+	border-radius: $gap/2;
+
+	&_header {
+		position: absolute;
+		top: -$gapem * 0.666;
+		left: $gapem;
+		background-color: $color-bg;
+		padding: 0 $gapem;
+	}
+	&_title {
+		line-height: $lh-solid;
+		margin: 0;
+	}
+
+	&_content {
+		margin: 0;
+		padding: $gapem * 1.25 $gapem 0 $gapem;
+	}
+}

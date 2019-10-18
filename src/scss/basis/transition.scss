@@ -1,0 +1,20 @@
+.fade {
+	&-enter {
+		opacity: 0;
+
+		&-done {
+			opacity: 1;
+			transition: opacity 190ms ease-in;
+		}
+	}
+
+	&-exit {
+		opacity: 1;
+		display: none;
+
+		&-active {
+			opacity: 0;
+			transition: all 170ms;
+		}
+	}
+}

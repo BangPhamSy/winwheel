@@ -1,0 +1,137 @@
+/*----------------------------------------------------
+-------------------- MAIN LAYOUT ---------------------
+-----------------------------------------------------*/
+.auth {
+  background-image: url("../images/bg-02.png") !important;
+}
+#body {
+  // background-color: $color-bg;
+  background-image: url("../images/bg-01.png");
+  min-height: calc(100vh - 5rem - 146px);
+
+  .body-content {
+    display: flex;
+    min-height: calc(100vh - 15rem);
+
+    .side-bar {
+      flex: 0 0 calc(#{$mobile-menu-maxWidth} - #{$gap});
+      margin-right: $gap;
+      margin-left: -1.25rem;
+      background: white;
+      padding-left: 1.35rem;
+    }
+
+    .site-content {
+      flex: 1 1 auto;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      min-height: $gapem * 28;
+    }
+  }
+
+  .form-size-layout {
+    max-width: $gap * 32; //480px;
+  }
+}
+
+#footer {
+  // padding-top: $footer-gap;
+  // padding-bottom: $gap;
+  background-color: $color-bg-footer;
+
+  .group-heading {
+    font-size: $font-body;
+    font-weight: 600;
+    margin-bottom: $gap/2;
+    a {
+      color: $color-text-footer-heading;
+    }
+  }
+
+  .footer-menu {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    &.col-split-2 {
+      column-count: 2;
+    }
+    & > li {
+      margin-bottom: $gap/4;
+
+      & > a {
+        font-size: $font-small;
+        color: $color-text-footer;
+      }
+    }
+  }
+
+  .footer-links {
+    margin-top: 2.35rem;
+  }
+
+  .footer-link {
+    color: $color-text-footer;
+    font-size: $font-small;
+    display: inline-block;
+    line-height: $gapem * 0.8;
+
+    &:not(:last-child) {
+      margin-right: $gap/2;
+      padding-right: $gap/2;
+      border-right: 1px solid;
+    }
+
+    a {
+      color: $color-text-footer;
+    }
+  }
+
+  .region {
+    font-size: $font-small;
+
+    b {
+      font-weight: 600;
+    }
+
+    .footer-link {
+      margin-left: $gap/2;
+      padding-left: $gap/2;
+      border-left: 1px solid;
+      color: $color-text-footer;
+    }
+  }
+
+  .copyright {
+    font-size: 70%;
+    color: $color-text-footer;
+
+    .footer-logo img {
+      width: $gap * 7.5;
+    }
+  }
+
+  //responsive layout
+  @media (max-width: map-get($grid-breakpoints, "sm")) {
+    .footer-menu {
+      display: none;
+      &.col-split-2 {
+        column-count: 1;
+      }
+    }
+    .footer-links {
+      margin-top: 0;
+    }
+    .footer-link {
+      display: block;
+      margin: $gap/2 0;
+      line-height: $gap;
+      &:not(:last-child) {
+        border-right: none;
+      }
+    }
+    .footer-logo {
+      display: none;
+    }
+  }
+}

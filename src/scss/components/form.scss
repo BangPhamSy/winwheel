@@ -1,0 +1,37 @@
+.form {
+  &-guide {
+    font-size: $f7-font-size;
+    line-height: $lh-copy;
+    color: $color-text-2;
+    font-weight: $fw-normal;
+    margin-top: -$gap/2;
+    margin-bottom: $gap;
+    vertical-align: middle;
+  }
+  &-error {
+    display: inline-block;
+    color: $color-error;
+    margin-top: $gap/2;
+    font-size: $font-sub;
+  }
+  &-group {
+    position: relative;
+    > .icon.icon-info {
+      position: absolute;
+      top: 55%;
+      right: -$gap * 1.1;
+    }
+    &:not(:last-child) {
+      margin-bottom: $gap;
+    }
+    &.mob .row .col-12:not(:last-child) {
+      margin-bottom: $gap;
+    }
+  }
+  label[data-required="true"]::after {
+    content: "*";
+    // color: $color-error;
+    // padding-left: $gap * 0.25;
+    padding-right: $gap * 0.25;
+  }
+}

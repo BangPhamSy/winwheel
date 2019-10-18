@@ -1,0 +1,34 @@
+@mixin clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin button-shadow($shadow: "") {
+	@if $shadow != "" {
+		$shadow: $shadow + ", ";
+	}
+
+	box-shadow: #{$shadow} 0 0.6rem 0.8rem rgba($color-black, 0.08);
+}
+
+@mixin box-shadow($shadow: "") {
+	@if $shadow != "" {
+		$shadow: $shadow + ", ";
+	}
+
+	box-shadow: #{$shadow} 0 0.1rem 0.5rem rgba($color-black, 0.08);
+}
+
+@mixin link-active {
+	text-decoration: none;
+	box-shadow: 0 0.2em 0 -0.1em;
+}
+
+@mixin sidebar-menu-active {
+	font-weight: 600;
+	color: #74D1EA;
+	box-shadow: none;
+}

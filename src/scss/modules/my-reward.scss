@@ -1,0 +1,19 @@
+.table-rewards {
+	.table-row {
+		&:not(.table-header) {
+			font-size: $font-sub;
+		}
+		.table-col {
+			.rewards-title {
+				font-size: $font-body;
+				font-weight: $fw-bolder;
+			}
+			.col-icon {
+				> img.reward-icon {
+					height: $gap * 3;
+					width: $gap * 3;
+				}
+			}
+		}
+	}
+}

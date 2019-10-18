@@ -1,0 +1,71 @@
+.table {
+	width: 100%;
+	tr {
+		border-bottom: 1px solid $color-grey;
+	}
+
+	td,
+	th {
+		padding: $gap * 0.25;
+	}
+
+	thead {
+		th {
+			font-weight: $fw-bolder;
+			color: $color-text-1;
+		}
+	}
+	tbody {
+		tr:last-child {
+			border-bottom: none;
+		}
+
+		td {
+			font-weight: $fw-bold;
+			color: $color-text-2;
+			padding: $gap * 0.5;
+		}
+	}
+}
+
+/*******************************************
+* Custom table using DIV, see [account] page
+*********************************************/
+.table {
+	& > .table-row {
+		&:not(:last-child) {
+			border-bottom: 1px solid $color-grey;
+			margin: 0.625rem 0;
+		}
+
+		& > .table-col {
+			padding: $gap/2;
+
+			&.table-col-icon {
+				display: flex;
+
+				& > .col-icon {
+					flex: 0 0 $gap * 4;
+					padding-right: $gap;
+					width: $gap * 4;
+					max-width: 15vw;
+
+					img {
+						width: 100%;
+						max-width: 100%;
+						max-height: 100%;
+					}
+				}
+				& > .col-text {
+					flex: 1 1 auto;
+				}
+			}
+		}
+
+		&.table-header {
+			& > .table-col {
+				font-weight: $fw-bolder;
+			}
+		}
+	}
+}

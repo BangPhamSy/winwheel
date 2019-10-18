@@ -1,0 +1,12 @@
+#my-account-page {
+	.section-my-account {
+		margin: $gap * 1.5 0;
+		text-align: center;
+	}
+	.section-my-reward {
+		margin-bottom: $gap * 2;
+	}
+	.reward-progress-box {
+		max-width: $gap * 6;
+	}
+}

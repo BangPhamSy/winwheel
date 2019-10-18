@@ -1,0 +1,57 @@
+#my-profile {
+  .cta-buttons {
+    & > .btn {
+      min-width: $gap * 10; //280px;
+      text-align: center;
+      font-weight: normal;
+      margin: 0.3rem;
+    }
+    & > .btn-secondary {
+      background: none;
+      color: #7f8c8d;
+      padding: 0;
+      min-width: 0;
+    }
+  }
+  .btn-edit {
+    border-radius: 10px;
+    background-image: linear-gradient(
+      to right,
+      #ff3700 0%,
+      #ff592c 51%,
+      #ff7f5c 100%
+    );
+    color: #fff;
+    background-color: transparent;
+    font-weight: normal;
+    font-size: inherit;
+    width: 10rem;
+  }
+  .btn-save {
+    border-radius: 10px;
+    background-image: linear-gradient(
+      to right,
+      #ff8900 0%,
+      #ff7a13 51%,
+      #ff6232 100%
+    );
+    color: #fff;
+    background-color: transparent;
+    font-weight: normal;
+    font-size: inherit;
+    width: 12rem;
+  }
+  .btn-primary {
+    height: 2.5rem;
+    padding: 0rem 1.875rem;
+    font-size: smaller;
+  }
+  @media (max-width: map-get($grid-breakpoints, "sm")) {
+    h4 {
+      text-align: center;
+    }
+    .check-box-mobile {
+      margin-left: 0.625rem !important;
+    }
+  }
+}

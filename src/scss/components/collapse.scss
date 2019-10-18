@@ -1,0 +1,72 @@
+.card {
+  margin: 0 $gap;
+  padding-bottom: $gap;
+
+  &-header {
+    padding: 2.25rem 0.625rem;
+    padding-bottom: $gap * 0.5;
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: $f5-font-size;
+    font-weight: $fw-bold;
+    .text-left {
+      color: #ff3700;
+      font-weight: normal;
+      font-size: medium;
+    }
+    &-arrow {
+      float: right;
+      width: $gap/2;
+      height: $gap/2;
+      border: 0;
+      border-bottom: 0.1rem solid;
+      border-right: 0.1rem solid;
+      transition: all 200ms ease;
+      color: #ff3700;
+      transform: rotate(-45deg);
+    }
+
+    .show &-arrow {
+      top: 2px;
+      width: $gap/2;
+      height: $gap/2;
+      border: 0;
+      border-bottom: 0.1rem solid;
+      border-right: 0.1rem solid;
+      transform: rotate(-135deg);
+    }
+  }
+
+  &:not(:last-child) {
+    box-shadow: 0 0.2em 0 -0.1em rgba($color-black, 0.2);
+  }
+
+  .collapse {
+    position: relative;
+    padding: 0 $gap/2;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.125s ease-in;
+    height: 0;
+
+    * {
+      font-size: $f6-font-size;
+      color: $color-text-2;
+      font-weight: $fw-lighter;
+    }
+
+    &.show {
+      display: block;
+      height: auto;
+      opacity: 1;
+      line-height: 1.5625rem;
+      border-top: 2px solid #cccccc;
+      padding-top: 0.9375rem;
+      // margin-bottom: $gap;
+    }
+  }
+
+  .collaping {
+    opacity: 0;
+  }
+}

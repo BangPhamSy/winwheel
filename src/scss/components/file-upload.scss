@@ -1,0 +1,9 @@
+.file-upload-container {
+	padding: $gap/2 $gap;
+	border-radius: $gap/4;
+	background-color: $color-control-inactive;
+
+	& > .file-upload {
+		width: 100%;
+	}
+}

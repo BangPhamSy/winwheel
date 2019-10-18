@@ -1,0 +1,47 @@
+.container-wheel {
+}
+#myCanvas {
+  position: relative;
+  width: 100%;
+}
+.btn-spin {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+}
+.ic-spin {
+  width: 70px;
+}
+.modal-header .modal-close-mark {
+  position: absolute;
+  top: 0.0625rem;
+  right: 0.325rem;
+  margin-left: auto;
+}
+.modal-header {
+  padding: 1em 1.25em 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+  #myCanvas {
+    position: relative;
+    width: 150% !important;
+    margin-left: -25%;
+  }
+  .ic-spin {
+    width: 40px;
+  }
+  .btn-spin {
+    width: 40px;
+    height: 40px;
+  }
+  .container-wheel {
+    overflow: hidden;
+  }
+}

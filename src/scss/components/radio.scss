@@ -1,0 +1,107 @@
+/*----------------------------------------------------
+--------------------- RADIO BTN ----------------------
+-----------------------------------------------------*/
+
+input[type="radio"].radio {
+	position: absolute;
+	top: 0.5rem;
+	
+	& + label {
+		position: relative;
+		margin-left: 1.75rem;
+	}
+}
+
+input[type="radio"].checkbox {
+	position: absolute;
+	visibility: hidden;
+	z-index: -1;
+
+	& + label {
+		position: relative;
+		display: inline-flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		padding-left: $gapem * 2.15;
+		min-height: $gap * 1.5;
+		color: #7F8C8D;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			height: $gap * 1.55;
+			width: $gap * 1.55;
+			border-radius: $gapem/4;
+			border: 1px solid #7F8C8D;
+			background-color: transparent;
+			box-shadow: 0 $gapem/4 $gapem/4 $gapem * -0.15 rgba($color-black, 0.1);
+
+			left: 0;
+			align-self: baseline;
+			transition: all 200ms ease;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			height: $gap/2;
+			width: $gap * 1.15;
+			left: $gap * 0.2;
+			top: $gap * 0.4;
+			color: #fff;
+			border-left: 0.2em solid;
+			border-bottom: 0.2em solid;
+			transform: rotate(0deg);
+			opacity: 0;
+
+			transition: all 200ms ease;
+		}
+	}
+
+	&:checked + label{
+		&::before {
+			background-color: transparent;
+		}
+
+		&::after {
+			opacity: 1;
+			transform: rotate(-45deg);
+			border-color: #74D1EA;
+		}
+	}
+
+	&:not(:disabled):not(:checked) + label:hover {
+		&::before {
+			@include button-shadow();
+			transform: translateY(-$gapem/6);
+		}
+	}
+
+	&:disabled + label {
+		&::before,
+		&::after {
+			box-shadow: none;
+			color: $color-tertiary;
+		}
+
+		&:hover {
+			&::before,
+			&::after {
+				cursor: not-allowed;
+			}
+		}
+	}
+
+	&:disabled:checked + label {
+		&::before,
+		&::after {
+			box-shadow: none;
+		}
+
+		&::before {
+			background-color: $color-control-inactive;
+		}
+	}
+}

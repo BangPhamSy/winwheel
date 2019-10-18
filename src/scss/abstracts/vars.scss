@@ -1,0 +1,142 @@
+/*----------------------------------------------------
+------------------ SCSS VARIABLES --------------------
+-----------------------------------------------------*/
+
+/*************************
+* SPACINGS
+**************************/
+
+$gap: 1.25rem; //20px
+$gapem: 1.25em; //20px
+$gaps: () !default;
+$gaps: map-merge(
+  (
+    0: 0,
+    1: (
+      $gap * 0.25
+    ),
+    2: (
+      $gap * 0.5
+    ),
+    3: $gap,
+    4: (
+      $gap * 1.5
+    ),
+    5: (
+      $gap * 3
+    )
+  ),
+  $gaps
+);
+$footer-gap: $gap/2; //60px
+$enable-grid-classes: true !default;
+$enable-print-styles: true !default;
+$grid-columns: 12 !default;
+$grid-gutter-width: $gap * 2;
+/*************************
+* FONTS
+**************************/
+
+$font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol" !default;
+// Font-Sizes
+$font-body: 0.9375rem !default; //15px
+$font-sub: 0.875rem !default; //14px
+$font-small: 0.75rem !default; //12px;
+$f1-font-size: $font-body * 2.5 !default; //37.5px
+$f2-font-size: $font-body * 2 !default; //30px
+$f3-font-size: $font-body * 1.75 !default; //26.25
+$f4-font-size: $font-body * 1.5 !default; //22.5px
+$f5-font-size: $font-body * 1.25 !default; //18.75px
+$f6-font-size: $font-body !default; //15px
+$f7-font-size: $font-body * 0.85 !default; //12.75px
+$f8-font-size: $font-body * 0.7 !default; //10.5px
+$f9-font-size: $font-body * 0.55 !default; //8.25px
+// Line Heights
+$lh-solid: 1 !default;
+$lh-normal: normal !default;
+$lh-title: 1.25 !default;
+$lh-copy: 1.5 !default;
+// Font-Weights
+$fw-lighter: 300;
+$fw-normal: 500;
+$fw-bold: 600;
+$fw-bolder: 700;
+/*************************
+* COLORS
+**************************/
+
+//Color palette
+$color-primary: #1d252d !default;
+$color-secondary: #c0a65c !default;
+$color-tertiary: #7f8c8d !default;
+$color-black: #000000 !default;
+$color-white: #ffffff !default;
+$color-grey: #d9d9d9 !default;
+$color-text-footer: #ffffff !default;
+$color-text-footer-heading: #7f8c8d !default;
+// Background colors
+$color-bg: #f7f7f7;
+$color-bg-header: $color-primary;
+$color-bg-footer: #5f646a !default;
+$color-bg-highlight: #1f1f1f !default;
+//Text colors
+$color-text-1: $color-primary;
+$color-text-2: #808080 !default;
+$color-text-3: $color-grey !default;
+$color-text-4: #585757 !default;
+$color-text-link: #74d1ea;
+//Control colors
+$color-control-active: #ffffff !default;
+$color-control-inverted: #f6f6f6 !default;
+$color-control-inactive: #e5e5e5 !default;
+// Status colors
+$color-info: #0071b5 !default;
+$color-success: #1b7d52 !default;
+$color-warning: #8a6400 !default;
+$color-error: #d80000 !default;
+// Status background colors
+$color-bg-info: #daf3fe !default;
+$color-bg-success: #e8f5e9 !default;
+$color-bg-warning: #f3ecd9 !default;
+$color-bg-error: #fff0f0 !default;
+$field-error: inset 0 0 0 $gap * 0.1 $color-error !default;
+
+$color-btn-primary: #231f20;
+
+//break points
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+// Grid containers
+// definethe maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+$sizes: map-merge(
+  (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto
+  ),
+  $sizes
+);
+// Spinner
+$spinner-offset: 187;
+$spinner-duration: 1.4s;
+// Mobile menu vars
+$header-minHeight: $gap * 4;
+$mobile-menu-width: 80vw;
+$mobile-menu-maxWidth: $gap * 18;

@@ -1,0 +1,195 @@
+// .landing-page {
+// 	#body {
+// 		.info-bar {
+// 			background-color: #262626;
+// 			padding: $gap/2 0;
+
+// 			a {
+// 				color: $color-secondary;
+// 				font-size: $font-small;
+// 			}
+// 		}
+
+// 		.title {
+// 			font-weight: $fw-bold;
+// 			font-size: $f4-font-size;
+
+// 			.subtitle {
+// 				color: $color-secondary;
+// 				font-size: $font-sub;
+// 			}
+// 		}
+
+// 		.rewards-section {
+// 			.stars-section {
+// 				background-image: linear-gradient(to bottom, transparent, #000000),
+// 					url(../images/backgrounds/bg-index.jpg);
+// 				background-size: cover;
+// 				background-position: top center;
+// 				background-color: $color-bg-highlight;
+// 				background-repeat: no-repeat;
+
+// 				text-align: center;
+// 				padding-top: $gap * 3.5;
+// 				padding-bottom: $gap * 2;
+
+// 				.star-title {
+// 					color: $color-secondary;
+// 					font-weight: $fw-normal;
+// 					font-size: $f4-font-size;
+// 				}
+
+// 				.img-reward {
+// 					margin-top: $gap;
+// 					padding: 0 $gap;
+
+// 					img {
+// 						max-width: 100%;
+// 					}
+// 				}
+// 			}
+
+// 			.benefits-section {
+// 				background-image: linear-gradient(to top, transparent 80%, #000000),
+// 					url(../images/backgrounds/bg-benefits.jpg);
+// 				background-size: cover;
+// 				background-position: bottom center;
+// 				background-color: $color-bg-highlight;
+// 				background-repeat: no-repeat;
+// 				padding-bottom: $gap * 5;
+
+// 				.benefits-sub-title {
+// 					text-align: center;
+// 					color: $color-secondary;
+// 					// padding-top: $gap * 2;
+// 					font-weight: $fw-bold;
+// 					font-size: $f5-font-size;
+// 				}
+
+// 				.benefits-text {
+// 					text-align: center;
+// 					color: $color-white;
+// 					margin: $gap/3 0;
+// 					font-size: $font-sub;
+// 				}
+
+// 				.benefit-group {
+// 					border: 1px solid $color-secondary;
+// 					border-radius: 10px;
+// 					margin-top: $gap * 2;
+
+// 					legend {
+// 						color: $color-secondary;
+// 						width: auto;
+// 						text-align: center;
+// 						padding: 0 $gap;
+// 						margin: 0 $gap;
+// 						font-size: $f4-font-size;
+// 						font-weight: $fw-bold;
+
+// 						@supports (not (browser: ie-and-edge)) and (not (-ms-ime-align: auto)) {
+// 							display: inline-block;
+// 						}
+
+// 						.legend-subtitle {
+// 							color: $color-white;
+// 							font-weight: normal;
+// 							font-size: $font-small;
+// 							margin-top: $gap/5;
+// 						}
+// 					}
+
+// 					.benefit-group-content {
+// 						text-align: center;
+// 						color: $color-white;
+// 						margin: $gap 0;
+
+// 						.img-benefit {
+// 							img {
+// 								max-width: 100%;
+// 							}
+// 						}
+
+// 						.text-benefit {
+// 							font-size: $font-small;
+// 							margin-top: $gap/2;
+// 						}
+// 					}
+
+// 					&.level-green {
+// 						border-color: $color-primary;
+// 						legend {
+// 							color: $color-primary;
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		.the-app-section {
+// 			background-color: $color-white;
+// 			padding-top: $gap * 2;
+// 			padding-bottom: $gap * 2;
+
+// 			.img-wrapper {
+// 				img {
+// 					max-width: 100%;
+// 					max-height: 100%;
+// 				}
+// 			}
+
+// 			.app-logos {
+// 				a {
+// 					margin-right: $gap/2;
+// 					display: inline-block;
+
+// 					img {
+// 						height: 40px;
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		.card-design-section {
+// 			color: $color-white;
+
+// 			.latest-design {
+// 				background-image: url(../images/backgrounds/bg-star-codes.jpg);
+// 				background-size: cover;
+// 				background-position: top center;
+// 				background-color: $color-bg-highlight;
+// 				background-repeat: no-repeat;
+
+// 				padding-top: $gap * 4;
+// 				padding-bottom: $gap * 2;
+
+// 				.card-slider {
+// 					margin-top: $gap;
+
+// 					.card-item {
+// 						.card-img:hover {
+// 							cursor: default;
+// 						}
+// 					}
+// 				}
+// 			}
+
+// 			.design-contact {
+// 				background-image: url(~/../images/backgrounds/bg-faqs.png);
+// 				background-size: contain;
+// 				background-position: bottom center;
+// 				background-color: $color-bg-highlight;
+// 				background-repeat: no-repeat;
+
+// 				padding-top: $gap * 2;
+// 				padding-bottom: $gap * 5;
+// 			}
+// 		}
+
+// 		.faqs-section {
+// 			background-color: $color-white;
+// 			padding-top: $gap * 2;
+// 			padding-bottom: $gap * 2;
+// 		}
+// 	}
+// }

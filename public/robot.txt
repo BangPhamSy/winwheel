@@ -1,0 +1,14 @@
+User-Agent: *
+Crawl-Delay: 5
+
+Disallow:
+Disallow: /account
+Disallow: /unregister
+Disallow: /contact-us
+Disallow: /transactions
+Disallow: /cards
+Disallow: /rewards
+Disallow: /profile
+Disallow: /logout
+Disallow: /verification
+Disallow: /reset-password

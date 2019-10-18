@@ -1,0 +1,60 @@
+#about {
+  .section-banner {
+    img {
+      max-height: 300px;
+      width: calc(100vw - #{$mobile-menu-maxWidth});
+    }
+  }
+
+  .row.section {
+    .text-our {
+      font-weight: normal;
+      color: #ff3700;
+    }
+    // border-bottom: 1px solid #70707078;
+
+    .about-title {
+      font-weight: 800;
+    }
+    .font-sub {
+      color: $color-tertiary;
+      line-height: $lh-copy;
+    }
+    &.address .col-6 {
+      color: $color-tertiary;
+      line-height: 1.5;
+    }
+    .map {
+      text-align: left;
+    }
+    .map-info {
+      text-align: left;
+      color: $color-tertiary;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .faq {
+      text-align: left;
+      p.question {
+        font-weight: bold;
+      }
+      p.answer {
+        margin-left: 8px;
+      }
+    }
+  }
+  @media (max-width: map-get($grid-breakpoints, "lg")) {
+    .section-banner {
+      img {
+        width: 100vw;
+      }
+    }
+    .map {
+      margin-bottom: 1.75rem;
+      img {
+        max-width: 21rem;
+      }
+    }
+  }
+}

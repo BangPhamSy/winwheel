@@ -1,0 +1,165 @@
+.ReactModalPortal > * {
+	// When the modal is closed, overlay div has no css class
+	// This selector should be overridden by the `&--after-open` class below
+	opacity: 0;
+}
+
+.ReactModal {
+	&__Body {
+		&--open {
+			overflow: hidden;
+		}
+	}
+
+	&__Overlay {
+		&--after-open {
+			opacity: 1;
+			& > .modal {
+				animation: openModal 300ms;
+			}
+		}
+
+		&--before-close {
+			& > .modal {
+				animation: closeModal 300ms;
+			}
+		}
+	}
+}
+
+.modal {
+	&-overlay {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		padding: 8vh 0;
+		overflow: auto;
+		z-index: 200;
+		background-color: rgba($color-black, 0.152);
+	}
+
+	max-width: 90vw;
+	width: 600px;
+	margin: auto;
+	min-height: 150px;
+	box-shadow: 0px $gap $gap * 10 (-$gap * 2.5) rgba($color-black, 1);
+	border-radius: $gap/4;
+	font-size: $font-body;
+	background-color: $color-white;
+	overflow: hidden;
+	transition: all 300ms ease;
+
+	&-header {
+		display: flex;
+		padding: $gap 0;
+		position: relative;
+
+		&-title {
+			padding-left: $gap;
+			padding-right: $gap * 3;
+		}
+		.modal-close-mark {
+			position: absolute;
+			top: $gap * 0.75;
+			right: $gap/2;
+			margin-left: auto;
+
+			.btn-close-mark {
+				-webkit-appearance: none;
+				appearance: none;
+				background-color: transparent;
+				border: 1px solid #d9d9d9;
+				border-radius: 50%;
+				position: relative;
+				width: $gap * 1.2;
+				height: $gap * 1.2;
+				padding: 0;
+				transition: all 200ms ease;
+
+				&::before,
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: $gap * 0.7;
+					height: $gap/10;
+					background-color: $color-grey;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					margin: auto;
+					transition: all 200ms ease;
+				}
+				&::before {
+					transform: rotate(-45deg);
+				}
+				&::after {
+					transform: rotate(45deg);
+				}
+
+				&:hover {
+					cursor: pointer;
+
+					&::before,
+					&::after {
+						background-color: darken($color-grey, 20%);
+					}
+				}
+			}
+		}
+	}
+
+	&-body {
+		padding: $gap;
+	}
+
+	&-footer {
+		padding: $gap;
+		// background-color: $color-bg;
+		text-align: center;
+
+		.btn {
+			min-width: 6rem;
+		}
+	}
+}
+
+@keyframes openModal {
+	0% {
+		filter: blur(50px);
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	80% {
+		opacity: 1;
+		transform: scale(1.07);
+	}
+	100% {
+		filter: blur(0px);
+		transform: scale(1);
+	}
+}
+@keyframes closeModal {
+	0% {
+		filter: blur(0px);
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		filter: blur(50px);
+		opacity: 0;
+		transform: scale(0.8);
+	}
+}
+
+@media (max-width: map-get($grid-breakpoints, "md")) {
+	.modal {
+		&-overlay {
+			padding: 14vh 0;
+		}
+	}
+}

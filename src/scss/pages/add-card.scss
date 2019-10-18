@@ -1,0 +1,23 @@
+#add-card {
+	.cta-buttons {
+		& > .btn {
+			min-width: $gap * 14; //280px;
+			text-align: center;
+			font-weight: normal;
+		}
+	}
+	.form-container-box {
+		border: 1px solid #7F8C8D;
+		padding: 2.25rem 1.25rem 2.25rem 1.25rem;
+		border-radius: 1rem;
+	}
+	input#securityCode {
+		max-width: 60%;
+	}
+	@media (max-width: map-get($grid-breakpoints, "sm")) {
+		.form-container-box {
+			border: none;
+		}
+	}
+}
+

@@ -1,0 +1,108 @@
+/* FONT-SIZES */
+
+h1 {
+	font-size: $f1-font-size;
+}
+h2 {
+	font-size: $f2-font-size;
+}
+h3 {
+	font-size: $f3-font-size;
+}
+h4 {
+	font-size: $f4-font-size;
+}
+h5 {
+	font-size: $f5-font-size;
+}
+h6 {
+	font-size: $f6-font-size;
+}
+
+.font-body {
+	font-size: $font-body;
+}
+.font-sub {
+	font-size: $font-sub;
+}
+.font-small {
+	font-size: $font-small;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+		//font-sizes
+		.f1#{$infix} {
+			font-size: $f1-font-size !important;
+		} //37.5px
+		.f2#{$infix} {
+			font-size: $f2-font-size !important;
+		} //30px
+		.f3#{$infix} {
+			font-size: $f3-font-size !important;
+		} //26.25
+		.f4#{$infix} {
+			font-size: $f4-font-size !important;
+		} //22.5px
+		.f5#{$infix} {
+			font-size: $f5-font-size !important;
+		} //18.75px
+		.f6#{$infix} {
+			font-size: $f6-font-size !important;
+		} //15px
+		.f7#{$infix} {
+			font-size: $f7-font-size !important;
+		} //12.75px
+		.f8#{$infix} {
+			font-size: $f8-font-size !important;
+		} //10.5px
+		.f9#{$infix} {
+			font-size: $f9-font-size !important;
+		} //8.25px
+
+		//font-weights
+		.fw-lighter#{$infix} {
+			font-weight: $fw-lighter;
+		}
+		.fw-normal#{$infix} {
+			font-weight: $fw-normal;
+		}
+		.fw-bold#{$infix} {
+			font-weight: $fw-bold;
+		}
+		.fw-bolder#{$infix} {
+			font-weight: $fw-bolder;
+		}
+
+		//line-height
+		.lh-solid#{$infix} {
+			line-height: $lh-solid;
+		}
+		.lh-normal#{$infix} {
+			line-height: $lh-normal;
+		}
+		.lh-title#{$infix} {
+			line-height: $lh-title;
+		}
+		.lh-copy#{$infix} {
+			line-height: $lh-copy;
+		}
+	}
+}
+
+/* LINE-HEIGHT */
+.text-underline {
+	text-decoration: underline !important;
+}
+
+.word-break-all {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-all;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}

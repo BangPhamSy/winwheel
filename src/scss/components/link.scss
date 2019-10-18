@@ -1,0 +1,33 @@
+.link {
+  transition: box-shadow 200ms ease;
+  cursor: pointer;
+  color: $color-text-1;
+
+  &:hover,
+  &.link-active {
+    color: inherit;
+    @include link-active;
+  }
+
+  &.link-underline {
+    box-shadow: 0 0.2em 0 -0.1em;
+  }
+
+  &.link-primary {
+    color: #ff3700;
+
+    &:hover {
+      box-shadow: 0 0.2em 0 -0.1em;
+    }
+  }
+
+  &-no-style {
+    color: $color-text-2;
+
+    &:hover {
+      color: $color-text-2;
+      font-weight: normal;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.card-list {
+	max-width: 920px;
+	h4 {
+		font-weight: 600;
+	}
+}
+
+.transaction-card-list {
+	display: grid;
+}
+
+.card-item {
+	// display: flex;
+	// flex-direction: column;
+	font-size: $font-sub;
+	display: inline-block;
+	vertical-align: top;
+	padding: $gap $gap;
+
+	&.selected {
+		border: 1px solid $color-tertiary;
+		border-radius: $gap/2;
+	}
+
+	// &.gift-card {
+	// 	.card-img {
+	// 		margin-left: -8px;
+	// 	}
+	// }
+
+	.card-img {
+		position: relative;
+		border-radius: $gap/2;
+		transition: all 200ms ease;
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		.qr-container {
+			width: 100%;
+			max-width: 320px;
+			max-height: 100%;
+			display: none;
+			background: white;
+			text-align: center;
+			display: none;
+			padding: 1rem 0 1.25rem;
+			border-radius: 0.625rem;
+			box-shadow: 2px 2px 4px #a5a5a5;
+			// mocking qr-code img
+			// .qr-img {
+			// 	width: 331px;
+			// 	height: 188px;
+			// 	background-color: white;
+			// }
+		}
+
+		.add-card-text {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			color: $color-text-2;
+			font-weight: $fw-lighter;
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			@include button-shadow();
+		}
+		&:active {
+			transition: all 100ms ease;
+			box-shadow: none;
+			transform: translateY($gap/10);
+		}
+	}
+
+	.card-info {
+		margin-top: $gap/2;
+
+		.card-title {
+			font-weight: $fw-bolder;
+			font-size: $font-body;
+		}
+		.card-no {
+			font-weight: $fw-bold;
+		}
+	}
+
+	.card-value {
+		margin-top: $gap/2;
+
+		.value {
+			font-size: $f3-font-size;
+			font-weight: $fw-normal;
+		}
+	}
+
+	.card-default {
+		margin-top: $gap/4;
+		font-size: $font-small;
+		font-weight: $fw-bold;
+	}
+
+	.card-exp {
+		margin-top: $gap/2;
+		margin-bottom: $gap/2;
+	}
+
+	.card-set-as-default {
+		margin-top: $gap;
+		font-weight: $fw-bold;
+	}
+
+	&.add-card {
+		.card-img {
+			color: $color-text-2;
+			height: 120px;
+			border: $gap/10 dotted $color-text-2;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&:hover {
+				background-color: $color-white;
+				color: $color-text-1;
+			}
+		}
+	}
+}
+
+@media (max-width: map-get($grid-breakpoints, "sm")) {
+	.card-item {
+		max-width: 100%;
+		flex: 0 0 100%;
+		text-align: left;
+		// padding: 0 3rem;
+		.card-info,
+		.card-value,
+		.card-exp {
+			text-align: left;
+		}
+	}
+	.transactions-card-container {
+		display: flex;
+		overflow-x: auto;
+		overflow-y: hidden;
+		.card-item {
+			max-width: 80%;
+		}
+	}
+}
